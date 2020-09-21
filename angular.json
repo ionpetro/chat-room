@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "base-chat"
+    }
+  },
+  "defaultProject": "base-chat",
+  "cli": {
+    "analytics": false
+  }
 }
