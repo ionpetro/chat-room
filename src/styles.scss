@@ -11,7 +11,7 @@ body {
   width: 100%;
   min-height: 100%;
   background: #eee;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-size: cover;
   font-family: "Open Sans", sans-serif;
 }
@@ -19,6 +19,7 @@ body {
 app-chatroom {
   display: flex;
   flex-direction: column;
+  // overflow: hidden;
 }
 
 app-navbar {

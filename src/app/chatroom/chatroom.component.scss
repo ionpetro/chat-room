@@ -1,6 +1,8 @@
 .mainContent{
   display: flex;
+  position: relative;
 }
+
 
 .userListWrapper {
   background-color: #2A2845;
@@ -26,8 +28,11 @@
 }
 
 .chatFormWrapper {
+  position: absolute;
+  bottom: 84px;
+  width: 100%;
   display: flex;
-  height: 50px;
+  height: 40px;
   background-color: #eee;
   z-index: 3;
 }
@@ -40,4 +45,8 @@ background-color: #F5F5F5;
 
 app-user-list {
   width: 100%;
+}
+
+.spacing {
+  height: 500px;
 }
