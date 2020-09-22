@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
     this.user= this.authService.authUser();
     this.user.subscribe(user => {
       if (user) {
-        this.userEmail = user.email;
+        this.userEmail = user.email.split('@')[0];
       }
     })
   }

@@ -19,7 +19,6 @@ export class ChatService {
     private db: AngularFireDatabase,
     private afAuth: AngularFireAuth
   ) {
-    console.log(afAuth);
     this.afAuth.authState.subscribe(auth => {
       if (auth !== undefined && auth !== null) {
         this.user = auth;
@@ -58,7 +57,6 @@ export class ChatService {
     }
     );
 
-      console.log('Called sendMessage()');
   }
 
   getMessages(): AngularFireList<ChatMessage[]> {
