@@ -1,1 +1,33 @@
-<p>login-form works!</p>
+<div class="container">
+  <div class="loginCard">
+    <h2 class="heading">Log In</h2>
+    <form #loginForm="ngForm" (ngSubmit)="login()">
+
+      <div class="errorMsg" *ngIf="errorMsg">
+        <i class="fas fa-exclamation-circle"></i> No user with this records
+      </div>
+
+      <label>Email</label>
+      <input
+      [(ngModel)]="email"
+        type="email"
+        name="email"
+        class="formInput" required />
+
+       <label>Password</label>
+      <input type="password"
+        [(ngModel)]="password"
+        name="password"
+        class="formInput" required />
+
+        <button [disabled]="loginForm.form.invalid"
+        type="submit"
+        (click)="login()"
+        class="btn"
+        id="btn-login">
+              Log In
+      </button>
+
+    </form>
+  </div>
+</div>
