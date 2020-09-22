@@ -20,7 +20,7 @@
         name="password"
         class="formInput" required />
 
-        <button [disabled]="loginForm.form.invalid"
+        <button [disabled]="!loginForm.form.valid"
         type="submit"
         (click)="login()"
         class="btn"
