@@ -5,8 +5,6 @@ import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import { ChatMessage } from '../models/chat-message.model'
 import * as firebase from 'firebase/app';
-import { timeStamp } from 'console';
-
 
 @Injectable({
   providedIn: 'root'
@@ -28,17 +26,19 @@ export class ChatService {
     // });
   }
 
-  sendMessage(msg: string) {
-    const timestamp = this.getTimeStamp();
+  sendMessage(msg: string): void {
+    const timeStamp = this.getTimeStamp();
     // const email = this.user.email;
     const email = 'this.user.email';
     this.chatMessages = this.getMessages();
     this.chatMessages.push(
-      {// userName: this.userName,
+      {
+      // userName: this.userName,
       userName: 'yolo',
       message: msg,
       email: email,
-      timeSent: timestamp}
+      timeSent: timeStamp
+    }
     );
 
       console.log('Called sendMessage()');
@@ -46,9 +46,9 @@ export class ChatService {
 
   getMessages(): AngularFireList<ChatMessage[]> {
     //query to create our message feed binding
-    return this.db.list('messages', ref => {
-      return ref.limitToLast(25).orderByKey()
-    });
+    return this.db.list('/messages' , ref =>
+      ref.limitToLast(25).orderByKey()
+    );
   }
 
   getTimeStamp():string {
