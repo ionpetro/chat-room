@@ -1,20 +1,20 @@
 .container{
   overflow:hidden;
-  background:
-    linear-gradient(45deg, rgba(0,103, 255, 0.3), rgba(0, 150, 80, 0.9));
+  max-width: 3000px;
+  background: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
 }
 
 .signUpCard{
   display: block;
-  border: 1px solid #000;
+  border: 1px;
   border-radius: 4px;
   background-color: rgba(255,255,255,0.85);
   width: 700px;
   height: 520px;
   margin: auto;
-  margin-top: 30px;
-  padding: 80px 30px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.17), 0 1px 2px rgba(0,0,0,0.24);
+  margin-top: 50px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.17), 0 2px 15px rgba(0,0,0,0.24);
   overflow: hidden;
 }
 
@@ -59,8 +59,10 @@
 }
 
 h2{
-    text-align: center;
-    height: 2em;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  height: 2em;
 }
 
 a {
