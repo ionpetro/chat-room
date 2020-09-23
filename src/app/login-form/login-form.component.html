@@ -7,20 +7,37 @@
         <i class="fas fa-exclamation-circle"></i> No user with this records
       </div>
 
-      <label>Email</label>
+      <div style="height: 70px;" class="field">
+      <label style="text-align: left; height: 20px;" class="label">Email</label>
+      <div  class="control has-icons-left">
       <input
       [(ngModel)]="email"
         type="email"
         name="email"
-        class="formInput" required />
+        required class="input formInput"/>
+        <span style="padding-top: 12px;" class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
 
-       <label>Password</label>
+        </div>
+      </div>
+
+      <div style="height: 70px;" class="field">
+        <label style="text-align: left; height: 20px;" class="label">Password</label>
+        <div class="control has-icons-left">
       <input type="password"
         [(ngModel)]="password"
         name="password"
-        class="formInput" required />
+        class="input" required />
+        <span style="padding-top: 12px;" class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+        </div>
+        </div>
 
-        <button [disabled]="!loginForm.form.valid"
+
+
+        <button style="height: 60px;" [disabled]="!loginForm.form.valid"
         type="submit"
         (click)="login()"
         class="btn"
