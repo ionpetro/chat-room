@@ -6,13 +6,35 @@
 }
 
 #logo{
-  background: url('../../assets/logo.svg');
   display: inline-block;
   background-size: cover;
   margin: 5px 10px 12px 32px;
   width: 60px;
   height: 60px;
   min-width: 60px;
+}
+
+.bullet1 {
+  position: relative;
+  animation: bullets-animation 1.5s ease infinite;
+}
+
+.bullet2 {
+  position: relative;
+  animation: bullets-animation 1.5s ease .2s infinite;
+  // animation: up-down 3s ease-in-out 1s infinite;
+}
+
+.bullet3 {
+  position: relative;
+  animation: bullets-animation 1.5s ease .4s infinite;
+  // animation: up-down 3s ease-in-out 2s infinite;
+}
+
+@keyframes bullets-animation {
+  from {opacity: 80%;}
+  50% {opacity: 20%;}
+  to {opacity: 80%;}
 }
 
 #heading{
